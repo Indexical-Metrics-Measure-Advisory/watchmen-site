@@ -1,7 +1,7 @@
 export const DefaultTheme = {
 	code: 'default',
 
-	titleFontFamily: 'Poppins, , sans-serif',
+	titleFontFamily: 'Poppins, sans-serif',
 	titleFontWeight: 700,
 
 	darkBgColor: 'rgb(24,24,24,0.95)',
@@ -27,7 +27,16 @@ export const DefaultTheme = {
 
 	biggestSloganFontFamily: 'Oswald',
 	biggestSloganFontWeight: 500,
-	biggestSloganFontSize: 88
+	biggestSloganFontSize: 88,
+
+	minorSloganFontFamily: 'Oswald, sans-serif',
+	minorSloganFontWeight: 500,
+	minorSloganFontSize: 22,
+
+	majorCommentFontFamily: 'Poppins, sans-serif',
+	majorCommentFontWeight: 400,
+	majorCommentFontSize: 18,
+	majorCommentLineHeight: '1.5em'
 };
 
 export type ThemeType = typeof DefaultTheme
