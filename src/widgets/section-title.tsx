@@ -26,6 +26,6 @@ export const SectionComment = styled.div.attrs({'data-widget': 'section-comment'
 	font-size: var(--section-comment-font-size);
 	line-height: var(--section-comment-line-height);
 	margin: auto;
-	max-width: 60%;
+	max-width: 65%;
 	text-align: center;
 `;
