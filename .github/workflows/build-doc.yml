@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: yarn
-      - run: yarn build
+      - run: PUBLIC_PATH=/watchmen-site yarn build
       - run: rm -rf docs
       - run: mv build docs
       - name: Commit docs file
