@@ -1,5 +1,6 @@
 import {SectionServicesContainer} from './widgets';
 import {SectionComment, SectionMinorTitle, SectionTitle} from '../../widgets/section-title';
+import {ServiceCards} from './service-cards';
 
 export const SectionServices = () => {
 	return <SectionServicesContainer>
@@ -11,5 +12,6 @@ export const SectionServices = () => {
 			your particular needs. Book a meeting with one of our consultants to hear more about how we can assist your
 			operation.
 		</SectionComment>
+		<ServiceCards/>
 	</SectionServicesContainer>;
 };

@@ -27,6 +27,7 @@ export const DefaultTheme = {
 	headerMenuFontSize: 14,
 
 	sectionVMargin: 108,
+	sectionHMargin: 64,
 
 	sectionTitleFontFamily: 'Oswald, sans-serif',
 	sectionTitleFontWeight: 500,
@@ -54,7 +55,9 @@ export const DefaultTheme = {
 	majorCommentFontFamily: 'Poppins, sans-serif',
 	majorCommentFontWeight: 400,
 	majorCommentFontSize: 18,
-	majorCommentLineHeight: '1.5em'
+	majorCommentLineHeight: '1.5em',
+
+	serviceCardColumnGap: 40
 };
 
 export type ThemeType = typeof DefaultTheme
