@@ -33,5 +33,21 @@ export const ServiceCardImage = styled.div.attrs<{ image: string }>(({image}) =>
 	height: 300px;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: cover;
+`;
+export const ServiceCardContent = styled.div.attrs({'data-widget': 'home-service-card-content'})`
+	display: grid;
+	position: relative;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr;
+	height: 320px;
+	background-color: var(--dark-bg-color);
+	padding: var(--h-margin) var(--home-service-card-v-margin);
+	justify-items: center;
+	> div:first-child {
+		text-align: center;
+	}
+	> button[data-widget='service-card-button'] {
+		align-self: end;
+	}
 `;

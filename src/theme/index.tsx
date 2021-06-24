@@ -55,6 +55,10 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
 	a:visited {
 		color: var(--font-color);
 	}
+	
+	button {
+		border: 0;
+	}
 
 	input::placeholder {
 		color: var(--placeholder-color);

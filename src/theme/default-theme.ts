@@ -8,6 +8,7 @@ export const DefaultTheme = {
 	darkFontColor: 'rgb(249,249,249)',
 	lightBgColor: 'rgb(249,249,249)',
 	lightFontColor: 'rgb(24,24,24)',
+	lightHoverBgColor: 'rgb(159,159,159)',
 
 	vMargin: 32,
 	hMargin: 64,
@@ -16,6 +17,7 @@ export const DefaultTheme = {
 
 	buttonLineHeight: '2em',
 	buttonHoverColor: 'rgb(203,143,140)',
+	buttonPadding: 24,
 
 	logoBgColor: 'rgb(138, 54, 56)',
 	logoPathColor: 'rgb(255,255,255)',
@@ -44,7 +46,19 @@ export const DefaultTheme = {
 	sectionCommentFontSize: 18,
 	sectionCommentLineHeight: '1.5em',
 
-	biggestSloganFontFamily: 'Oswald',
+	serviceCardColumnGap: 40,
+	serviceCardSloganFontFamily: 'Oswald, sans-serif',
+	serviceCardSloganFontWeight: 500,
+	serviceCardSloganFontSize: 28,
+	serviceCardSloganLineHeight: '1.5em',
+
+	serviceCardButtonHeight: 48,
+	serviceCardButtonFontFamily: 'Raleway, sans-serif',
+	serviceCardButtonFontWeight: 400,
+	serviceCardButtonFontSize: 18,
+	serviceCardButtonLineHeight: '1.5em',
+
+	biggestSloganFontFamily: 'Oswald, sans-serif',
 	biggestSloganFontWeight: 500,
 	biggestSloganFontSize: 88,
 
@@ -57,7 +71,7 @@ export const DefaultTheme = {
 	majorCommentFontSize: 18,
 	majorCommentLineHeight: '1.5em',
 
-	serviceCardColumnGap: 40
+	homeServiceCardVMargin: 48
 };
 
 export type ThemeType = typeof DefaultTheme
