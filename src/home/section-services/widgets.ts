@@ -5,7 +5,7 @@ export const SectionServicesContainer = styled.div.attrs({'data-widget': 'home-s
 	position: relative;
 	flex-direction: column;
 	width: 100%;
-	padding: var(--section-h-margin) var(--section-v-margin);
+	padding: var(--section-v-margin) var(--section-h-margin);
 	background-color: var(--light-bg-color);
 	color: var(--light-font-color);
 `;
