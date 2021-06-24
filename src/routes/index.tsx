@@ -3,6 +3,7 @@ import {HashRouter, Redirect, Route, Switch} from 'react-router-dom';
 import {Router} from './router';
 import {Header} from '../header';
 import {Home} from '../home';
+import {Footer} from '../footer';
 
 export const Routes = () => {
 	return <Suspense fallback={<div/>}>
@@ -20,5 +21,6 @@ export const Routes = () => {
 				</Route>
 			</Switch>
 		</HashRouter>
+		<Footer/>
 	</Suspense>;
 };

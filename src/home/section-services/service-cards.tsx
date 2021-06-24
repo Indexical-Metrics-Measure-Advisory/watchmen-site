@@ -2,7 +2,7 @@ import {ServiceCard, ServiceCardContent, ServiceCardImage, ServiceCardsContainer
 import ServicePipeline from '../../assets/service-pipeline.jpeg';
 import ServiceGovernance from '../../assets/service-governance.jpeg';
 import ServiceContent from '../../assets/service-content.jpeg';
-import {ServiceCardButton, ServiceCardSlogan} from '../../widgets/service-card';
+import {ServiceCardButton, ServiceCardSlogan} from './service-card';
 
 export const ServiceCards = () => {
 	return <ServiceCardsContainer>
