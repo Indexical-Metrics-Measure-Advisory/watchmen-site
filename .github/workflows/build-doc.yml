@@ -26,7 +26,7 @@ jobs:
           commit_message: "commit to repo"
           author_name: botliks
       - name: github push
-        uses: ad-m/github-push-action@v0.5.0
+        uses: ad-m/github-push-action@v0.6.0
         with:
           github_token: ${{ secrets.PAT_TOKEN }}
           branch: main
