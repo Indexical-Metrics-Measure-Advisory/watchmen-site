@@ -1,0 +1,35 @@
+name: Matryoshka Site Build
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: yarn
+      - run: yarn clean
+      - run: yarn build
+      - run: rm -rf docs
+      - run: mv build docs
+      - name: Commit docs file
+        uses: zwaldowski/git-commit-action@v1
+        with:
+          commit_message: "commit to repo"
+          author_name: botliks
+      - name: github push
+        uses: ad-m/github-push-action@v0.5.0
+        with:
+          github_token: ${{ secrets.PAT_TOKEN }}
+          force: true
+        env:
+          CI: true
