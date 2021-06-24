@@ -17,7 +17,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: yarn
-      - run: yarn clean
       - run: yarn build
       - run: rm -rf docs
       - run: mv build docs
