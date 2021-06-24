@@ -6,6 +6,8 @@ export const DefaultTheme = {
 
 	darkBgColor: 'rgb(24,24,24,0.95)',
 	darkFontColor: 'rgb(249,249,249)',
+	lightBgColor: 'rgb(249,249,249)',
+	lightFontColor: 'rgb(24,24,24)',
 
 	vMargin: 32,
 	hMargin: 64,
@@ -21,9 +23,25 @@ export const DefaultTheme = {
 	headerHeight: 120,
 	headerLogoSize: 40,
 	headerCompanyFontSize: 24,
-	// headerMenuFontFamily: '\'Barlow Condensed\', sans-serif',Montserrat
 	headerMenuFontFamily: 'Montserrat, sans-serif',
 	headerMenuFontSize: 14,
+
+	sectionVMargin: 108,
+
+	sectionTitleFontFamily: 'Oswald, sans-serif',
+	sectionTitleFontWeight: 500,
+	sectionTitleFontSize: 50,
+	sectionTitleLineHeight: '1.5em',
+
+	sectionMinorTitleFontFamily: 'Raleway, sans-serif',
+	sectionMinorTitleFontWeight: 400,
+	sectionMinorTitleFontSize: 22,
+	sectionMinorTitleLineHeight: '1.5em',
+
+	sectionCommentFontFamily: 'Raleway, sans-serif',
+	sectionCommentFontWeight: 400,
+	sectionCommentFontSize: 18,
+	sectionCommentLineHeight: '1.5em',
 
 	biggestSloganFontFamily: 'Oswald',
 	biggestSloganFontWeight: 500,

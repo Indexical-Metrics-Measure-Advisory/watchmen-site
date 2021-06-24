@@ -8,7 +8,7 @@ export const SectionMainContainer = styled.div.attrs({'data-widget': 'home-secti
 	height: 900px;
 	background-image: url(${HomePrimaryImage});
 	background-position: center;
-	background-size: cover;
+	background-size: contain;
 `;
 export const SectionMainContent = styled.div.attrs({'data-widget': 'home-section-main-content'})`
 	display: flex;
@@ -51,5 +51,4 @@ export const MajorComment = styled.span.attrs({'data-widget': 'home-section-majo
 	color: var(--dark-font-color);
 	width: 60%;
 	text-align: center;
-	
-`
+`;
