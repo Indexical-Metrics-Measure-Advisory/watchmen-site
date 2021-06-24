@@ -5,7 +5,7 @@ export const DefaultTheme = {
 	titleFontWeight: 700,
 
 	darkBgColor: 'rgb(24,24,24,0.95)',
-	darkFontColor: 'rgb(255,255,255)',
+	darkFontColor: 'rgb(249,249,249)',
 
 	vMargin: 32,
 	hMargin: 64,
@@ -18,11 +18,16 @@ export const DefaultTheme = {
 	logoBgColor: 'rgb(138, 54, 56)',
 	logoPathColor: 'rgb(255,255,255)',
 
+	headerHeight: 120,
 	headerLogoSize: 40,
 	headerCompanyFontSize: 24,
 	// headerMenuFontFamily: '\'Barlow Condensed\', sans-serif',Montserrat
 	headerMenuFontFamily: 'Montserrat, sans-serif',
-	headerMenuFontSize: 14
+	headerMenuFontSize: 14,
+
+	biggestSloganFontFamily: 'Oswald',
+	biggestSloganFontWeight: 500,
+	biggestSloganFontSize: 88
 };
 
 export type ThemeType = typeof DefaultTheme

@@ -6,7 +6,7 @@ export const HeaderContainer = styled.header.attrs({'data-widget': 'header'})`
 	grid-template-columns: auto auto 1fr auto;
 	align-items: center;
 	width: 100%;
-	height: 120px;
+	height: var(--header-height);
 	padding: var(--v-margin) var(--h-margin);
 	background-color: var(--dark-bg-color);
 
@@ -34,6 +34,7 @@ export const Menu = styled.div.attrs<{ active: boolean }>(({active}) => {
 	return {
 		'data-widget': 'header-menu',
 		style: {
+			color: active ? 'var(--button-hover-color)' : (void 0),
 			textDecoration: active ? 'underline' : (void 0)
 		}
 	};
