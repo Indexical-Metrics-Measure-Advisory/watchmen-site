@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.js": "/watchmen-site/static/js/main.e7c76651.chunk.js",
+    "main.js.map": "/watchmen-site/static/js/main.e7c76651.chunk.js.map",
+    "runtime-main.js": "/watchmen-site/static/js/runtime-main.c29f689b.js",
+    "runtime-main.js.map": "/watchmen-site/static/js/runtime-main.c29f689b.js.map",
+    "static/css/2.679831fc.chunk.css": "/watchmen-site/static/css/2.679831fc.chunk.css",
+    "static/js/2.734b49e9.chunk.js": "/watchmen-site/static/js/2.734b49e9.chunk.js",
+    "static/js/2.734b49e9.chunk.js.map": "/watchmen-site/static/js/2.734b49e9.chunk.js.map",
+    "static/js/3.5c128092.chunk.js": "/watchmen-site/static/js/3.5c128092.chunk.js",
+    "static/js/3.5c128092.chunk.js.map": "/watchmen-site/static/js/3.5c128092.chunk.js.map",
+    "index.html": "/watchmen-site/index.html",
+    "static/css/2.679831fc.chunk.css.map": "/watchmen-site/static/css/2.679831fc.chunk.css.map",
+    "static/js/2.734b49e9.chunk.js.LICENSE.txt": "/watchmen-site/static/js/2.734b49e9.chunk.js.LICENSE.txt",
+    "static/media/home-primary-compressed.7deac8fb.jpg": "/watchmen-site/static/media/home-primary-compressed.7deac8fb.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c29f689b.js",
+    "static/css/2.679831fc.chunk.css",
+    "static/js/2.734b49e9.chunk.js",
+    "static/js/main.e7c76651.chunk.js"
+  ]
+}
