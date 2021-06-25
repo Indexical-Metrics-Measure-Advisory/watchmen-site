@@ -1,5 +1,5 @@
 import {SectionClientsContainer} from './widgets';
-import {SectionMinorTitle, SectionTitle} from '../../widgets/section-title';
+import {SectionMinorTitle, SectionTitle} from '../widgets';
 import {ClientCards} from './client-cards';
 
 export const SectionClients = () => {

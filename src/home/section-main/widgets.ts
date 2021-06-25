@@ -26,28 +26,28 @@ export const SectionMainContent = styled.div.attrs({'data-widget': 'home-section
 export const BiggestSlogan = styled.span.attrs({'data-widget': 'home-section-biggest-slogan'})`
 	display: inline-flex;
 	position: relative;
-	font-family: var(--biggest-slogan-font-family);
-	font-weight: var(--biggest-slogan-font-weight);
-	font-size: var(--biggest-slogan-font-size);
+	font-family: Oswald, sans-serif;
+	font-weight: 500;
+	font-size: 88px;
 	color: var(--dark-font-color);
 	text-transform: uppercase;
 `;
 export const MinorSlogan = styled.span.attrs({'data-widget': 'home-section-minor-slogan'})`
 	display: inline-flex;
 	position: relative;
-	font-family: var(--minor-slogan-font-family);
-	font-weight: var(--minor-slogan-font-weight);
-	font-size: var(--minor-slogan-font-size);
+	font-family: Oswald, sans-serif;
+	font-weight: 500;
+	font-size: 22px;
 	margin: var(--v-margin) 0;
 	color: var(--dark-font-color);
 `;
 export const MajorComment = styled.span.attrs({'data-widget': 'home-section-major-comment'})`
 	display: inline-flex;
 	position: relative;
-	font-family: var(--major-comment-font-family);
-	font-weight: var(--major-comment-font-weight);
-	font-size: var(--major-comment-font-size);
-	line-height: var(--major-comment-line-height);
+	font-family: Poppins, sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1.5em;
 	color: var(--dark-font-color);
 	width: 60%;
 	text-align: center;

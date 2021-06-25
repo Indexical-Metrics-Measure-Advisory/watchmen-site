@@ -6,7 +6,7 @@ import {
 	SectionContactUsContent,
 	SubmitButton
 } from './widgets';
-import {SectionComment, SectionTitle} from '../../widgets/section-title';
+import {SectionComment, SectionTitle} from '../widgets';
 import {useRef, useState} from 'react';
 
 export const SectionContactUs = () => {
@@ -59,6 +59,7 @@ export const SectionContactUs = () => {
 
 			if (ok) {
 				const data = await response.json();
+				// eslint-disable-next-line
 				if (data.StatusCode == '0') {
 					setSent(true);
 					setTimeout(() => {
@@ -90,7 +91,7 @@ export const SectionContactUs = () => {
 				Haikou, Hainan, China
 			</SectionComment>
 			<SectionComment>
-				<a href="mailto:market@matrdata.com" target="_blank">market@matrdata.com</a>
+				<a href="mailto:market@matrdata.com" target="_blank" rel="noreferrer">market@matrdata.com</a>
 			</SectionComment>
 		</SectionContactUsContent>
 		<SectionContactUsContent>

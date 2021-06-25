@@ -27,37 +27,6 @@ export const DefaultTheme = {
 	headerCompanyFontSize: 24,
 	headerMenuFontFamily: 'Montserrat, sans-serif',
 	headerMenuFontSize: 14,
-
-	sectionVMargin: 108,
-	sectionHMargin: 64,
-
-	sectionTitleFontFamily: 'Oswald, sans-serif',
-	sectionTitleFontWeight: 500,
-	sectionTitleFontSize: 50,
-	sectionTitleLineHeight: '1.5em',
-
-	sectionMinorTitleFontFamily: 'Raleway, sans-serif',
-	sectionMinorTitleFontWeight: 400,
-	sectionMinorTitleFontSize: 22,
-	sectionMinorTitleLineHeight: '1.5em',
-
-	sectionCommentFontFamily: 'Raleway, sans-serif',
-	sectionCommentFontWeight: 400,
-	sectionCommentFontSize: 18,
-	sectionCommentLineHeight: '1.5em',
-
-	biggestSloganFontFamily: 'Oswald, sans-serif',
-	biggestSloganFontWeight: 500,
-	biggestSloganFontSize: 88,
-
-	minorSloganFontFamily: 'Oswald, sans-serif',
-	minorSloganFontWeight: 500,
-	minorSloganFontSize: 22,
-
-	majorCommentFontFamily: 'Poppins, sans-serif',
-	majorCommentFontWeight: 400,
-	majorCommentFontSize: 18,
-	majorCommentLineHeight: '1.5em',
 };
 
 export type ThemeType = typeof DefaultTheme

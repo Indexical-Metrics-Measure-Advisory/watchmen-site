@@ -1,5 +1,5 @@
 import {SectionServicesContainer} from './widgets';
-import {SectionComment, SectionMinorTitle, SectionTitle} from '../../widgets/section-title';
+import {SectionComment, SectionMinorTitle, SectionTitle} from '../widgets';
 import {ServiceCards} from './service-cards';
 
 export const SectionServices = () => {

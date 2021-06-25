@@ -4,7 +4,7 @@ import ClientItaka from '../../assets/client-itaka.png';
 import ClientPolar from '../../assets/client-polar.png';
 import ClientTargo from '../../assets/client-targo.png';
 import {ClientCardName} from './client-card';
-import {SectionComment} from '../../widgets/section-title';
+import {SectionComment} from '../widgets';
 
 export const ClientCards = () => {
 	return <ClientCardsContainer>

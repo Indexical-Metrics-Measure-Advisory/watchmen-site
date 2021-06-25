@@ -5,7 +5,7 @@ export const SectionClientsContainer = styled.div.attrs({'data-widget': 'home-se
 	position: relative;
 	flex-direction: column;
 	width: 100%;
-	padding: var(--section-v-margin) var(--section-h-margin);
+	padding: 108px 64px;
 	background-color: var(--dark-bg-color);
 	color: var(--dark-font-color);
 	> div[data-widget=section-title] {

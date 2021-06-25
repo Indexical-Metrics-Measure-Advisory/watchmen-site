@@ -5,30 +5,16 @@ export const SectionServicesContainer = styled.div.attrs({'data-widget': 'home-s
 	position: relative;
 	flex-direction: column;
 	width: 100%;
-	padding: var(--section-v-margin) var(--section-h-margin);
+	padding: 108px 64px;
 	background-color: var(--light-bg-color);
 	color: var(--light-font-color);
-
-	--service-card-v-margin: 48px;
-
-	--service-card-column-gap: 40px;
-	--service-card-slogan-font-family: Oswald, sans-serif;
-	--service-card-slogan-font-weight: 500;
-	--service-card-slogan-font-size: 28px;
-	--service-card-slogan-line-height: 1.5em;
-
-	--service-card-button-height: 48px;
-	--service-card-button-font-family: Raleway, sans-serif;
-	--service-card-button-font-weight: 400;
-	--service-card-button-font-size: 18px;
-	--service-card-button-line-height: 1.5em;
 `;
 export const ServiceCardsContainer = styled.div.attrs({'data-widget': 'home-service-cards'})`
 	display: grid;
 	position: relative;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-column-gap: var(--service-card-column-gap);
-	margin-top: calc(var(--v-margin) * 2);
+	grid-column-gap: 48px;
+	margin-top: 108px;
 `;
 export const ServiceCard = styled.div.attrs({'data-widget': 'home-service-card'})`
 	display: flex;
@@ -56,12 +42,39 @@ export const ServiceCardContent = styled.div.attrs({'data-widget': 'home-service
 	grid-template-rows: 1fr 1fr;
 	height: 320px;
 	background-color: var(--dark-bg-color);
-	padding: var(--h-margin) var(--service-card-v-margin);
+	padding: 64px 48px;
 	justify-items: center;
 	> div:first-child {
 		text-align: center;
 	}
 	> button[data-widget='service-card-button'] {
 		align-self: end;
+	}
+`;
+export const ServiceCardSlogan = styled.div.attrs({'data-widget': 'service-card-slogan'})`
+	position: relative;
+	font-family: Oswald, sans-serif;
+	font-size: 28px;
+	font-weight: 500;
+	line-height: 1.5em;
+	color: var(--dark-font-color);
+`;
+export const ServiceCardButton = styled.button.attrs({'data-widget': 'service-card-button'})`
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	height: 48px;
+	font-family: Raleway, sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	padding: 0 var(--button-padding);
+	background-color: var(--light-bg-color);
+	color: var(--light-font-color);
+	white-space: nowrap;
+	cursor: pointer;
+	transition: var(--transition);
+	&:hover {
+		background-color: var(--light-hover-bg-color);
 	}
 `;
