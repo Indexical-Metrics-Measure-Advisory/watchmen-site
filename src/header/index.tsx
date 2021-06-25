@@ -23,10 +23,13 @@ export const Header = () => {
 		<div/>
 		<Menus>
 			<Menu active={route === Router.HOME} onClick={onMenuClicked(Router.HOME)}>Home</Menu>
-			<Menu active={route === Router.SERVICES}>Services</Menu>
-			<Menu active={route === Router.GET_A_QUOTE}>Get A Quote</Menu>
-			<Menu active={route === Router.PLAN_AND_PRICING}>Plan & Pricing</Menu>
-			<Menu active={route === Router.CLIENTS}>Clients</Menu>
+			<Menu active={route === Router.SERVICES} onClick={onMenuClicked(Router.SERVICES)}>Services</Menu>
+			<Menu active={route === Router.GET_A_QUOTE} onClick={onMenuClicked(Router.GET_A_QUOTE)}>Get A Quote</Menu>
+			<Menu active={route === Router.PLAN_AND_PRICING}
+			      onClick={onMenuClicked(Router.PLAN_AND_PRICING)}>
+				Plan & Pricing
+			</Menu>
+			<Menu active={route === Router.CLIENTS} onClick={onMenuClicked(Router.CLIENTS)}>Clients</Menu>
 			<Menu active={route === Router.ABOUT} onClick={onMenuClicked(Router.ABOUT)}>About</Menu>
 		</Menus>
 	</HeaderContainer>;

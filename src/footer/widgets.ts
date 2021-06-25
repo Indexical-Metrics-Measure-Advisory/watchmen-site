@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const FooterContainer = styled.header.attrs({'data-widget': 'footer'})`
+export const FooterContainer = styled.footer.attrs({'data-widget': 'footer'})`
 	display: grid;
 	position: relative;
 	grid-template-columns: 1fr;

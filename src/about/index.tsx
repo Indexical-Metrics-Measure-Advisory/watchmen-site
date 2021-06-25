@@ -2,13 +2,12 @@ import {AboutContainer, AboutImageContainer, SectionComment, SectionMinorTitle, 
 
 export const About = () => {
 	return <AboutContainer>
-		<SectionTitle>WHAT WE DO</SectionTitle>
-		<SectionMinorTitle>More Than Just IT Support</SectionMinorTitle>
+		<SectionTitle>What We Do</SectionTitle>
+		<SectionMinorTitle>Professional IT Support</SectionMinorTitle>
 		<SectionComment>
-			Matryoshka data provides organizations of all sizes with the best, most trustworthy IT solutions. In the
-			ever-evolving technology market, we believe that companies need reliable allies who can guide them through
-			the challenges that accompany technological growth. We provide cloud, security and mobility services - to
-			name a few. Contact us today to find out more.
+			With a comprehensive range of services, Matryoshka Data can guarantee your technology needs are not just
+			met, but exceeded. We work closely with our clients to create customized plans that are seamlessly
+			integrated, effective and sustainable for many years to come. Reach out today to see how we can help.
 		</SectionComment>
 		<AboutImageContainer/>
 	</AboutContainer>;

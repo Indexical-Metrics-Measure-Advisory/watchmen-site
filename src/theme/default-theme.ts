@@ -11,6 +11,8 @@ export const DefaultTheme = {
 	logoBgColor: 'rgba(255,167,78,1)',
 	logoPathColor: 'rgb(255,255,255)',
 
+	bigCardBgColor: 'rgb(37,37,37)',
+
 	dangerColor: 'rgb(215,11,11)'
 };
 

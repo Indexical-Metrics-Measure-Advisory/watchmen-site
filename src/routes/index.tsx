@@ -5,6 +5,7 @@ import {Header} from '../header';
 import {Home} from '../home';
 import {Footer} from '../footer';
 import {About} from '../about';
+import {Services} from '../services';
 
 export const Routes = () => {
 	return <Suspense fallback={<div/>}>
@@ -12,7 +13,7 @@ export const Routes = () => {
 			<Header/>
 			<Switch>
 				<Route path={Router.HOME}><Home/></Route>
-				{/*<Route path={Router.SERVICES}></Route>*/}
+				<Route path={Router.SERVICES}><Services/></Route>
 				{/*<Route path={Router.GET_A_QUOTE}></Route>*/}
 				{/*<Route path={Router.PLAN_AND_PRICING}></Route>*/}
 				{/*<Route path={Router.CLIENTS}></Route>*/}
