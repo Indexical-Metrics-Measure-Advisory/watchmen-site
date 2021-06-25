@@ -4,18 +4,19 @@ import {Router} from './router';
 import {Header} from '../header';
 import {Home} from '../home';
 import {Footer} from '../footer';
+import {About} from '../about';
 
 export const Routes = () => {
 	return <Suspense fallback={<div/>}>
-		<Header/>
 		<HashRouter>
+			<Header/>
 			<Switch>
 				<Route path={Router.HOME}><Home/></Route>
 				{/*<Route path={Router.SERVICES}></Route>*/}
 				{/*<Route path={Router.GET_A_QUOTE}></Route>*/}
 				{/*<Route path={Router.PLAN_AND_PRICING}></Route>*/}
 				{/*<Route path={Router.CLIENTS}></Route>*/}
-				{/*<Route path={Router.ABOUT}></Route>*/}
+				<Route path={Router.ABOUT}><About/></Route>
 				<Route path="*">
 					<Redirect to={Router.HOME}/>
 				</Route>

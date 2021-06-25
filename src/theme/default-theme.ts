@@ -1,7 +1,7 @@
 export const DefaultTheme = {
 	code: 'default',
 
-	darkBgColor: 'rgb(24,24,24,0.95)',
+	darkBgColor: 'rgb(24,24,24)',
 	darkFontColor: 'rgb(249,249,249)',
 	lightBgColor: 'rgb(249,249,249)',
 	lightFontColor: 'rgb(24,24,24)',
