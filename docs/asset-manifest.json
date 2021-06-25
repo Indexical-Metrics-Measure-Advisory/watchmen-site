@@ -1,25 +1,30 @@
 {
   "files": {
-    "main.js": "/watchmen-site/static/js/main.78844109.chunk.js",
-    "main.js.map": "/watchmen-site/static/js/main.78844109.chunk.js.map",
+    "main.js": "/watchmen-site/static/js/main.72e115db.chunk.js",
+    "main.js.map": "/watchmen-site/static/js/main.72e115db.chunk.js.map",
     "runtime-main.js": "/watchmen-site/static/js/runtime-main.23d126b6.js",
     "runtime-main.js.map": "/watchmen-site/static/js/runtime-main.23d126b6.js.map",
     "static/css/2.679831fc.chunk.css": "/watchmen-site/static/css/2.679831fc.chunk.css",
-    "static/js/2.b5c180b2.chunk.js": "/watchmen-site/static/js/2.b5c180b2.chunk.js",
-    "static/js/2.b5c180b2.chunk.js.map": "/watchmen-site/static/js/2.b5c180b2.chunk.js.map",
+    "static/js/2.5410fd7d.chunk.js": "/watchmen-site/static/js/2.5410fd7d.chunk.js",
+    "static/js/2.5410fd7d.chunk.js.map": "/watchmen-site/static/js/2.5410fd7d.chunk.js.map",
     "static/js/3.3783c85b.chunk.js": "/watchmen-site/static/js/3.3783c85b.chunk.js",
     "static/js/3.3783c85b.chunk.js.map": "/watchmen-site/static/js/3.3783c85b.chunk.js.map",
     "index.html": "/watchmen-site/index.html",
     "static/css/2.679831fc.chunk.css.map": "/watchmen-site/static/css/2.679831fc.chunk.css.map",
-    "static/js/2.b5c180b2.chunk.js.LICENSE.txt": "/watchmen-site/static/js/2.b5c180b2.chunk.js.LICENSE.txt",
+    "static/js/2.5410fd7d.chunk.js.LICENSE.txt": "/watchmen-site/static/js/2.5410fd7d.chunk.js.LICENSE.txt",
     "static/media/about.8ef91073.jpeg": "/watchmen-site/static/media/about.8ef91073.jpeg",
     "static/media/big-service-content.128c4964.jpeg": "/watchmen-site/static/media/big-service-content.128c4964.jpeg",
     "static/media/big-service-governance.1986863f.jpeg": "/watchmen-site/static/media/big-service-governance.1986863f.jpeg",
     "static/media/big-service-pipeline.fe4b8c53.jpeg": "/watchmen-site/static/media/big-service-pipeline.fe4b8c53.jpeg",
+    "static/media/client-axes.d31ea0c5.png": "/watchmen-site/static/media/client-axes.d31ea0c5.png",
+    "static/media/client-hera.e1c52f7f.png": "/watchmen-site/static/media/client-hera.e1c52f7f.png",
     "static/media/client-hexa.4a4836c7.png": "/watchmen-site/static/media/client-hexa.4a4836c7.png",
     "static/media/client-itaka.e4fc4f5d.png": "/watchmen-site/static/media/client-itaka.e4fc4f5d.png",
     "static/media/client-polar.a2fcfc44.png": "/watchmen-site/static/media/client-polar.a2fcfc44.png",
+    "static/media/client-sovix.e6bd0ce8.png": "/watchmen-site/static/media/client-sovix.e6bd0ce8.png",
     "static/media/client-targo.957fd161.png": "/watchmen-site/static/media/client-targo.957fd161.png",
+    "static/media/client-volve.28b753a4.png": "/watchmen-site/static/media/client-volve.28b753a4.png",
+    "static/media/clients.05e4a99c.jpeg": "/watchmen-site/static/media/clients.05e4a99c.jpeg",
     "static/media/contact-us.3c7e49e4.jpeg": "/watchmen-site/static/media/contact-us.3c7e49e4.jpeg",
     "static/media/get-a-quote.e4e604b6.jpeg": "/watchmen-site/static/media/get-a-quote.e4e604b6.jpeg",
     "static/media/home-primary-compressed.7deac8fb.jpg": "/watchmen-site/static/media/home-primary-compressed.7deac8fb.jpg",
@@ -30,7 +35,7 @@
   "entrypoints": [
     "static/js/runtime-main.23d126b6.js",
     "static/css/2.679831fc.chunk.css",
-    "static/js/2.b5c180b2.chunk.js",
-    "static/js/main.78844109.chunk.js"
+    "static/js/2.5410fd7d.chunk.js",
+    "static/js/main.72e115db.chunk.js"
   ]
 }
