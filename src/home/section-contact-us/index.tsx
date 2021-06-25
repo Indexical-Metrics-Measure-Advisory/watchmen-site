@@ -17,8 +17,7 @@ interface DataError {
 	passAll: boolean;
 }
 
-// noinspection RegExpRedundantEscape
-const mail = /^([A-Za-z0-9_\-\.\u4e00-\u9fa5])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,8})$/;
+const mail = /^([A-Za-z0-9_\-.\u4e00-\u9fa5])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,8})$/;
 
 export const SectionContactUs = () => {
 	const [data, setData] = useState({name: '', email: '', subject: '', message: ''});
