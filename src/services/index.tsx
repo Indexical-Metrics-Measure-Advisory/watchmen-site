@@ -32,7 +32,7 @@ export const Services = () => {
 				<ServiceCardComment>
 					Enabling your workforce with top-notch technologies isn’t just important, but imperative for
 					business success. This customizable solution allows your team to work seamlessly and collaboratively
-					in a protected space. No matter what IT services you need, matryoshka will be there to support you
+					in a protected space. No matter what IT services you need, Matryoshka Data will be there to support you
 					every step of the way.
 				</ServiceCardComment>
 				<ServiceCardButton>Learn More</ServiceCardButton>
@@ -60,7 +60,7 @@ export const Services = () => {
 				<ServiceCardComment>
 					In today’s hyperconnected world, organizations are challenged in more ways than ever to stay ahead
 					of the curve. This comprehensive service is designed to fit your unique needs without disrupting
-					productivity or workflow. With our end-to-end solutions, matryoshka is sure to help your
+					productivity or workflow. With our end-to-end solutions, Matryoshka Data is sure to help your
 					organization succeed.
 				</ServiceCardComment>
 				<ServiceCardButton>Learn More</ServiceCardButton>
