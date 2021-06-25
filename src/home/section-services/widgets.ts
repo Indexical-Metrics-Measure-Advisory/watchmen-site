@@ -8,6 +8,15 @@ export const SectionServicesContainer = styled.div.attrs({'data-widget': 'home-s
 	padding: 108px 64px;
 	background-color: var(--light-bg-color);
 	color: var(--light-font-color);
+	> div[data-widget=section-title] {
+		padding-bottom: 32px;
+	}
+	> div[data-widget=section-minor-title] {
+		padding-bottom: 48px;
+	}
+	> div[data-widget=section-comment] {
+		width: 60%;
+	}
 `;
 export const ServiceCardsContainer = styled.div.attrs({'data-widget': 'home-service-cards'})`
 	display: grid;
@@ -43,13 +52,6 @@ export const ServiceCardContent = styled.div.attrs({'data-widget': 'home-service
 	height: 320px;
 	background-color: var(--dark-bg-color);
 	padding: 64px 48px;
-	justify-items: center;
-	> div:first-child {
-		text-align: center;
-	}
-	> button[data-widget='service-card-button'] {
-		align-self: end;
-	}
 `;
 export const ServiceCardSlogan = styled.div.attrs({'data-widget': 'service-card-slogan'})`
 	position: relative;
@@ -57,24 +59,27 @@ export const ServiceCardSlogan = styled.div.attrs({'data-widget': 'service-card-
 	font-size: 28px;
 	font-weight: 500;
 	line-height: 1.5em;
+	text-align: center;
 	color: var(--dark-font-color);
 `;
 export const ServiceCardButton = styled.button.attrs({'data-widget': 'service-card-button'})`
 	display: flex;
 	position: relative;
 	align-items: center;
+	align-self: end;
 	justify-content: center;
+	justify-self: center;
 	height: 48px;
 	font-family: Raleway, sans-serif;
 	font-size: 18px;
 	font-weight: 400;
-	padding: 0 var(--button-padding);
+	padding: 0 24px;
 	background-color: var(--light-bg-color);
 	color: var(--light-font-color);
 	white-space: nowrap;
 	cursor: pointer;
-	transition: var(--transition);
+	transition: background-color 300ms ease-in-out;
 	&:hover {
-		background-color: var(--light-hover-bg-color);
+		background-color: var(--button-hover-color);
 	}
 `;

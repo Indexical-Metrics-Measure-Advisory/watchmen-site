@@ -7,8 +7,8 @@ export const FooterContainer = styled.header.attrs({'data-widget': 'footer'})`
 	align-items: center;
 	text-align: center;
 	width: 100%;
-	height: var(--header-height);
-	padding: calc(var(--v-margin) * 2) var(--h-margin) 0;
+	height: 120px;
+	padding: 64px 64px 0;
 	background-color: var(--dark-bg-color);
 	color: var(--dark-font-color);
 	font-size: 14px;

@@ -6,24 +6,24 @@ export const HeaderContainer = styled.header.attrs({'data-widget': 'header'})`
 	grid-template-columns: auto auto 1fr auto;
 	align-items: center;
 	width: 100%;
-	height: var(--header-height);
-	padding: var(--v-margin) var(--h-margin);
+	height: 120px;
+	padding: 32px 64px;
 	background-color: var(--dark-bg-color);
 
 	> svg {
-		width: var(--header-logo-size);
-		height: var(--header-logo-size);
+		width: 40px;
+		height: 40px;
 	}
 `;
 export const HeaderCompanyName = styled.div.attrs({'data-widget': 'header-company-name'})`
 	display: flex;
 	position: relative;
 	align-items: center;
-	font-family: var(--title-font-family);
-	font-weight: var(--title-font-weight);
-	font-size: var(--header-company-font-size);
+	font-family: Poppins, sans-serif;
+	font-weight: 700;
+	font-size: 24px;
 	color: var(--dark-font-color);
-	margin-left: calc(var(--h-margin) / 4);
+	margin-left: 16px;
 `;
 export const Menus = styled.div.attrs({'data-widget': 'header-menus'})`
 	display: flex;
@@ -42,13 +42,13 @@ export const Menu = styled.div.attrs<{ active: boolean }>(({active}) => {
 	display: flex;
 	position: relative;
 	align-items: center;
-	font-family: var(--header-menu-font-family);
-	font-size: var(--header-menu-font-size);
+	font-family: Montserrat, sans-serif;
+	font-size: 14px;
 	color: var(--dark-font-color);
-	padding: 0 calc(var(--h-margin) / 4);
-	line-height: var(--button-line-height);
+	padding: 0 16px;
+	line-height: 2em;
 	cursor: pointer;
-	transition: var(--transition);
+	transition: color 300ms ease-in-out;
 	&:hover {
 		color: var(--button-hover-color);
 	}

@@ -44,7 +44,7 @@ export const SectionContactUs = () => {
 							tag: 'action',
 							actions: [{
 								tag: 'button',
-								text: {tag: 'plain_text', content: 'Reply it! you have to, boy!'},
+								text: {tag: 'plain_text', content: 'Reply it! You have to, boy!'},
 								type: 'primary',
 								url: `mailto:${emailRef.current?.value.trim() || ''}`
 							}]

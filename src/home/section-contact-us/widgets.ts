@@ -8,7 +8,7 @@ export const SectionContactUsContainer = styled.div.attrs({'data-widget': 'home-
 	position: relative;
 	width: 100%;
 	height: 800px;
-	padding: calc(var(--v-margin) * 2) var(--h-margin);
+	padding: 96px 64px 64px;
 	color: var(--dark-font-color);
 	&:before {
 		content: '';
@@ -24,20 +24,17 @@ export const SectionContactUsContainer = styled.div.attrs({'data-widget': 'home-
 		filter: saturate(1.2) hue-rotate(315deg) opacity(0.95);
 		z-index: -1;
 	}
-
-	--input-height: 48px;
 `;
 export const SectionContactUsContent = styled.div.attrs({'data-widget': 'home-section-contact-us-content'})`
 	display: flex;
 	position: relative;
 	flex-direction: column;
 	> div[data-widget=section-title] {
-		padding-top: var(--v-margin);
-		padding-bottom: calc(var(--v-margin) / 2);
+		padding-bottom: 0;
 		margin: 0 auto;
 	}
 	> div[data-widget=section-comment] {
-		margin: var(--v-margin) auto 0;
+		margin: 32px auto 0;
 		max-width: 50%;
 		&:nth-child(3),
 		&:nth-child(4) {
@@ -48,13 +45,13 @@ export const SectionContactUsContent = styled.div.attrs({'data-widget': 'home-se
 `;
 export const FieldName = styled.div.attrs({'data-widget': 'form-field-name'})<{ required: boolean }>`
 	position: relative;
-	font-family: var(--section-comment-font-family);
+	font-family: Raleway, sans-serif;
 	font-weight: 500;
-	font-size: var(--section-comment-font-size);
-	line-height: var(--section-comment-line-height);
+	font-size: 18px;
+	line-height: 1.5em;
 	margin-bottom: 4px;
 	&:first-child {
-		padding-top: calc(var(--v-margin) * 1.2);
+		padding-top: 12px;
 	}
 	&:after {
 		content: '*';
@@ -68,7 +65,7 @@ export const FieldInput = styled.input.attrs({'data-widget': 'form-field-input'}
 	color: var(--dark-font-color);
 	background-color: transparent;
 	width: 60%;
-	height: var(--input-height);
+	height: 48px;
 	padding: 0 12px;
 	margin-bottom: 20px;
 	appearance: none;
@@ -84,7 +81,7 @@ export const FieldMInput = styled.textarea.attrs({'data-widget': 'form-field-min
 	color: var(--dark-font-color);
 	background-color: transparent;
 	width: 60%;
-	height: calc(var(--input-height) * 4);
+	height: 192px;
 	padding: 12px;
 	margin-bottom: 20px;
 	appearance: none;
@@ -109,8 +106,8 @@ export const SubmitButton = styled.button.attrs({'data-widget': 'form-submit-but
 	padding: 12px;
 	appearance: none;
 	cursor: pointer;
-	transition: var(--transition);
+	transition: background-color 300ms ease-in-out;
 	&:hover {
-		background-color: var(--light-hover-bg-color);
+		background-color: var(--button-hover-color);
 	}
 `;

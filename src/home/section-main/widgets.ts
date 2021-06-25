@@ -38,7 +38,7 @@ export const MinorSlogan = styled.span.attrs({'data-widget': 'home-section-minor
 	font-family: Oswald, sans-serif;
 	font-weight: 500;
 	font-size: 22px;
-	margin: var(--v-margin) 0;
+	margin: 32px 0;
 	color: var(--dark-font-color);
 `;
 export const MajorComment = styled.span.attrs({'data-widget': 'home-section-major-comment'})`

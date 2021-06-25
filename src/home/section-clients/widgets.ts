@@ -11,19 +11,17 @@ export const SectionClientsContainer = styled.div.attrs({'data-widget': 'home-se
 	> div[data-widget=section-title] {
 		padding-bottom: 0;
 	}
+	> div[data-widget=section-minor-title] {
+		padding-bottom: 48px;
+	}
 
-	--client-card-column-gap: 40px;
-	--client-card-name-font-family: Oswald, sans-serif;
-	--client-card-name-font-weight: 500;
-	--client-card-name-font-size: 28px;
-	--client-card-name-line-height: 1.5em;
 `;
 export const ClientCardsContainer = styled.div.attrs({'data-widget': 'home-client-cards'})`
 	display: grid;
 	position: relative;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-column-gap: var(--client-card-column-gap);
-	margin: var(--v-margin) var(--h-margin) 0;
+	grid-column-gap: 48px;
+	margin: 32px 64px 0;
 `;
 export const ClientCard = styled.div.attrs({'data-widget': 'home-client-card'})`
 	display: flex;
@@ -48,9 +46,19 @@ export const ClientCardContent = styled.div.attrs({'data-widget': 'home-client-c
 	display: grid;
 	position: relative;
 	grid-template-columns: 1fr;
-	padding: var(--v-margin) 0 0;
+	padding: 32px 0 0;
 	justify-items: center;
 	> div[data-widget=section-comment] {
-		margin: var(--v-margin) 0 0;
+		width: 80%;
+		margin: 32px 0 0;
 	}
+`;
+export const ClientCardName = styled.div.attrs({'data-widget': 'client-card-name'})`
+	position: relative;
+	font-family: Oswald, sans-serif;
+	font-size: 28px;
+	font-weight: 500;
+	line-height: 1.5em;
+	color: var(--dark-font-color);
+	text-transform: uppercase;
 `;
