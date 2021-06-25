@@ -13,7 +13,8 @@ export const DefaultTheme = {
 
 	bigCardBgColor: 'rgb(37,37,37)',
 
-	dangerColor: 'rgb(215,11,11)'
+	dangerColor: 'rgb(215,11,11)',
+	planButtonBgColor: 'rgba(148,4,72,1)'
 };
 
 export type ThemeType = typeof DefaultTheme
