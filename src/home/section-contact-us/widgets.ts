@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import HomeContactUsImage from '../../assets/contact-us.jpeg';
+import color from 'color';
+import {getTheme} from '../../theme';
 
 export const SectionContactUsContainer = styled.div.attrs({'data-widget': 'home-section-contact-us'})`
 	display: grid;
@@ -59,7 +61,15 @@ export const FieldName = styled.div.attrs({'data-widget': 'form-field-name'})<{ 
 		margin-left: 4px;
 	}
 `;
-export const FieldInput = styled.input.attrs({'data-widget': 'form-field-input'})`
+export const FieldInput = styled.input.attrs<{ pass: boolean }>(({pass}) => {
+	return {
+		'data-widget': 'form-field-input',
+		style: {
+			backgroundColor: pass ? (void 0) : color(getTheme().dangerColor).alpha(0.1),
+			borderColor: pass ? (void 0) : 'var(--danger-color)'
+		}
+	};
+})<{ pass: boolean }>`
 	position: relative;
 	font-family: Raleway, sans-serif;
 	color: var(--dark-font-color);
@@ -71,11 +81,20 @@ export const FieldInput = styled.input.attrs({'data-widget': 'form-field-input'}
 	appearance: none;
 	outline: none;
 	border: 1px solid var(--dark-font-color);
+	transition: all 300ms ease-in-out;
 	&::placeholder {
 		color: var(--dark-font-color);
 	}
 `;
-export const FieldMInput = styled.textarea.attrs({'data-widget': 'form-field-minput'})`
+export const FieldMInput = styled.textarea.attrs<{ pass: boolean }>(({pass}) => {
+	return {
+		'data-widget': 'form-field-minput',
+		style: {
+			backgroundColor: pass ? (void 0) : color(getTheme().dangerColor).alpha(0.1),
+			borderColor: pass ? (void 0) : 'var(--danger-color)'
+		}
+	};
+})<{ pass: boolean }>`
 	position: relative;
 	font-family: Raleway, sans-serif;
 	color: var(--dark-font-color);
@@ -87,6 +106,8 @@ export const FieldMInput = styled.textarea.attrs({'data-widget': 'form-field-min
 	appearance: none;
 	outline: none;
 	border: 1px solid var(--dark-font-color);
+	resize: none;
+	transition: all 300ms ease-in-out;
 	&::placeholder {
 		color: var(--dark-font-color);
 	}

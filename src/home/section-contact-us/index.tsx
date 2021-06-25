@@ -7,17 +7,59 @@ import {
 	SubmitButton
 } from './widgets';
 import {SectionComment, SectionTitle} from '../widgets';
-import {useRef, useState} from 'react';
+import {ChangeEvent, useState} from 'react';
+
+interface DataError {
+	passName: boolean;
+	passEmail: boolean;
+	passMessage: boolean;
+
+	passAll: boolean;
+}
 
 export const SectionContactUs = () => {
-	const nameRef = useRef<HTMLInputElement>(null);
-	const emailRef = useRef<HTMLInputElement>(null);
-	const subjectRef = useRef<HTMLInputElement>(null);
-	const messageRef = useRef<HTMLTextAreaElement>(null);
+	const [data, setData] = useState({name: '', email: '', subject: '', message: ''});
 	const [sent, setSent] = useState(false);
-	const [error, setError] = useState(false);
+	const [error, setError] = useState<DataError>({passName: true, passEmail: true, passMessage: true, passAll: true});
 
+	const onNameChanged = (event: ChangeEvent<HTMLInputElement>) => {
+		const {value} = event.target;
+		setData({...data, name: value});
+		setError({...error, passName: value.trim().length !== 0});
+	};
+	const onEmailChanged = (event: ChangeEvent<HTMLInputElement>) => {
+		const {value} = event.target;
+		setData({...data, email: value});
+		setError({...error, passEmail: value.trim().length !== 0});
+	};
+	const onSubjectChanged = (event: ChangeEvent<HTMLInputElement>) => {
+		const {value} = event.target;
+		setData({...data, subject: value});
+	};
+	const onMessageChanged = (event: ChangeEvent<HTMLTextAreaElement>) => {
+		const {value} = event.target;
+		setData({...data, message: value});
+		setError({...error, passMessage: value.trim().length !== 0});
+	};
 	const onSubmitClicked = async () => {
+		// validate
+		let nameOK = true;
+		let emailOK = true;
+		let messageOK = true;
+		if (data.name.trim().length === 0) {
+			nameOK = false;
+		}
+		if (data.email.trim().length === 0) {
+			emailOK = false;
+		}
+		if (data.message.trim().length === 0) {
+			messageOK = false;
+		}
+		if (!nameOK || !emailOK || !messageOK) {
+			setError({passName: nameOK, passEmail: emailOK, passMessage: messageOK, passAll: false});
+			return;
+		}
+
 		try {
 			const url = 'https://open.feishu.cn/open-apis/bot/v2/hook/f94b26a3-6cf2-4110-a70d-d79577a79271';
 			const headers: HeadersInit = {
@@ -33,12 +75,12 @@ export const SectionContactUs = () => {
 					},
 					elements: [
 						{tag: 'hr'},
-						{tag: 'div', text: {tag: 'lark_md', content: `Name: ${nameRef.current?.value.trim()}`}},
-						{tag: 'div', text: {tag: 'lark_md', content: `Email: ${emailRef.current?.value.trim()}`}},
+						{tag: 'div', text: {tag: 'lark_md', content: `Name: ${data.name.trim()}`}},
+						{tag: 'div', text: {tag: 'lark_md', content: `Email: ${data.email.trim()}`}},
 						{tag: 'hr'},
-						{tag: 'div', text: {tag: 'lark_md', content: `Subject: ${subjectRef.current?.value.trim()}`}},
+						{tag: 'div', text: {tag: 'lark_md', content: `Subject: ${data.subject.trim()}`}},
 						{tag: 'hr'},
-						{tag: 'div', text: {tag: 'lark_md', content: messageRef.current?.value.trim()}},
+						{tag: 'div', text: {tag: 'lark_md', content: data.message.trim()}},
 						{tag: 'hr'},
 						{
 							tag: 'action',
@@ -46,7 +88,7 @@ export const SectionContactUs = () => {
 								tag: 'button',
 								text: {tag: 'plain_text', content: 'Reply it! You have to, boy!'},
 								type: 'primary',
-								url: `mailto:${emailRef.current?.value.trim() || ''}`
+								url: `mailto:${data.email.trim() || ''}`
 							}]
 						}
 					]
@@ -67,15 +109,15 @@ export const SectionContactUs = () => {
 					}, 10000);
 				}
 			} else {
-				setError(true);
+				setError({passName: true, passEmail: true, passMessage: true, passAll: false});
 				setTimeout(() => {
-					setError(false);
+					setError({passName: true, passEmail: true, passMessage: true, passAll: true});
 				}, 5000);
 			}
 		} catch {
-			setError(true);
+			setError({passName: true, passEmail: true, passMessage: true, passAll: false});
 			setTimeout(() => {
-				setError(false);
+				setError({passName: true, passEmail: true, passMessage: true, passAll: true});
 			}, 5000);
 		}
 	};
@@ -96,17 +138,29 @@ export const SectionContactUs = () => {
 		</SectionContactUsContent>
 		<SectionContactUsContent>
 			<FieldName required={true}>Name</FieldName>
-			<FieldInput placeholder="Enter your name" ref={nameRef}/>
+			<FieldInput placeholder={error.passName ? 'Enter your name' : 'Name is required'}
+			            value={data.name}
+			            onChange={onNameChanged}
+			            pass={error.passName}/>
 			<FieldName required={true}>Email</FieldName>
-			<FieldInput placeholder="Enter your email" ref={emailRef}/>
+			<FieldInput placeholder={error.passEmail ? 'Enter your email' : 'Email is required'}
+			            value={data.email}
+			            onChange={onEmailChanged}
+			            pass={error.passEmail}/>
 			<FieldName required={false}>Subject</FieldName>
-			<FieldInput placeholder="Type the subject" ref={subjectRef}/>
+			<FieldInput placeholder="Type the subject"
+			            value={data.subject}
+			            onChange={onSubjectChanged}
+			            pass={true}/>
 			<FieldName required={true}>Message</FieldName>
-			<FieldMInput placeholder="Type your message here..." ref={messageRef}/>
+			<FieldMInput placeholder={error.passMessage ? 'Type your message here...' : 'Message is required'}
+			             value={data.message}
+			             onChange={onMessageChanged}
+			             pass={error.passMessage}/>
 			<SubmitButton onClick={onSubmitClicked}>
 				{sent
 					? 'Appreciate you, we will contact you soon.'
-					: (error ? 'Something went error...' : 'Submit')}
+					: (!error.passAll ? 'Something went error...' : 'Submit')}
 			</SubmitButton>
 		</SectionContactUsContent>
 	</SectionContactUsContainer>;

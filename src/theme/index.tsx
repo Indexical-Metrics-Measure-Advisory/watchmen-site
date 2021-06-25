@@ -55,7 +55,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
 	a:visited {
 		color: var(--font-color);
 	}
-	
+
 	button {
 		border: 0;
 	}
@@ -68,6 +68,8 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
 		font-family: var(--code-font-family);
 	}
 `;
+
+export const getTheme = () => DefaultTheme;
 
 export const SiteTheme = () => {
 	return <ThemeProvider theme={DefaultTheme}>

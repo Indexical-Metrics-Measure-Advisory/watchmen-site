@@ -1,6 +1,7 @@
 import color from 'color';
 import styled from 'styled-components';
 import HomePrimaryImage from '../../assets/home-primary-compressed.jpg';
+import {getTheme} from '../../theme';
 
 export const SectionMainContainer = styled.div.attrs({'data-widget': 'home-section-main'})`
 	position: relative;
@@ -21,7 +22,7 @@ export const SectionMainContent = styled.div.attrs({'data-widget': 'home-section
 	width: 50%;
 	height: 100%;
 	padding: 120px 20px;
-	background-color: ${({theme}) => color(theme.darkBgColor).alpha(0.4).toString()};
+	background-color: ${() => color(getTheme().darkBgColor).alpha(0.4).toString()};
 `;
 export const BiggestSlogan = styled.span.attrs({'data-widget': 'home-section-biggest-slogan'})`
 	display: inline-flex;
