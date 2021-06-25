@@ -17,6 +17,9 @@ interface DataError {
 	passAll: boolean;
 }
 
+// noinspection RegExpRedundantEscape
+const mail = /^([A-Za-z0-9_\-\.\u4e00-\u9fa5])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,8})$/;
+
 export const SectionContactUs = () => {
 	const [data, setData] = useState({name: '', email: '', subject: '', message: ''});
 	const [sent, setSent] = useState(false);
@@ -25,12 +28,12 @@ export const SectionContactUs = () => {
 	const onNameChanged = (event: ChangeEvent<HTMLInputElement>) => {
 		const {value} = event.target;
 		setData({...data, name: value});
-		setError({...error, passName: value.trim().length !== 0});
+		setError({...error, passName: value.trim().length !== 0, passAll: true});
 	};
 	const onEmailChanged = (event: ChangeEvent<HTMLInputElement>) => {
 		const {value} = event.target;
 		setData({...data, email: value});
-		setError({...error, passEmail: value.trim().length !== 0});
+		setError({...error, passEmail: value.trim().length !== 0, passAll: true});
 	};
 	const onSubjectChanged = (event: ChangeEvent<HTMLInputElement>) => {
 		const {value} = event.target;
@@ -39,7 +42,7 @@ export const SectionContactUs = () => {
 	const onMessageChanged = (event: ChangeEvent<HTMLTextAreaElement>) => {
 		const {value} = event.target;
 		setData({...data, message: value});
-		setError({...error, passMessage: value.trim().length !== 0});
+		setError({...error, passMessage: value.trim().length !== 0, passAll: true});
 	};
 	const onSubmitClicked = async () => {
 		// validate
@@ -49,7 +52,7 @@ export const SectionContactUs = () => {
 		if (data.name.trim().length === 0) {
 			nameOK = false;
 		}
-		if (data.email.trim().length === 0) {
+		if (data.email.trim().length === 0 || !mail.test(data.email.trim())) {
 			emailOK = false;
 		}
 		if (data.message.trim().length === 0) {
