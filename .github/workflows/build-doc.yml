@@ -33,3 +33,12 @@ jobs:
           force: true
         env:
           CI: true
+      - name: notify feishu
+        uses: potaesm/github-actions-request@1.0.7
+        with:
+          url: ${{ secrets.FEISHU_CHANNLE_ID }}
+          method: post
+          baseURL: https://open.feishu.cn/open-apis/bot/v2/hook
+          headers: '{ "Content-Type": "application/json" }'
+          data: '{"msg_type":"interactive","card":{"config":{"wide_screen_mode":true},"header":{"title":{"tag":"lark_md","content":"来自BB8`official-site`的消息: 官网再一次发布成功."}},"elements":[{"tag":"hr"},{"tag":"action","actions":[{"tag":"button","text":{"tag":"plain_text","content":"去看看!"},"type":"primary","url":"https://indexical-metrics-measure-advisory.github.io/watchmen-site/"}]}]}}'
+          timeout: 30000
