@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {atMobile} from '../../theme';
 
 export const SectionServicesContainer = styled.div.attrs({'data-widget': 'home-section-services'})`
 	display: flex;
@@ -17,6 +18,13 @@ export const SectionServicesContainer = styled.div.attrs({'data-widget': 'home-s
 	> div[data-widget=section-comment] {
 		width: 60%;
 	}
+	
+	${atMobile} {
+		padding: 48px 20px;
+		> div[data-widget=section-comment] {
+			width: 100%;
+		}
+	}
 `;
 export const ServiceCardsContainer = styled.div.attrs({'data-widget': 'home-service-cards'})`
 	display: grid;
@@ -24,6 +32,11 @@ export const ServiceCardsContainer = styled.div.attrs({'data-widget': 'home-serv
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-column-gap: 48px;
 	margin-top: 108px;
+
+	${atMobile} {
+		grid-template-columns: 1fr;
+		margin-top: 64px;
+	}
 `;
 export const ServiceCard = styled.div.attrs({'data-widget': 'home-service-card'})`
 	display: flex;
@@ -52,6 +65,10 @@ export const ServiceCardContent = styled.div.attrs({'data-widget': 'home-service
 	height: 320px;
 	background-color: var(--dark-bg-color);
 	padding: 64px 48px;
+	
+	${atMobile} {
+		padding: 48px 32px;	
+	}
 `;
 export const ServiceCardSlogan = styled.div.attrs({'data-widget': 'service-card-slogan'})`
 	position: relative;
@@ -81,5 +98,9 @@ export const ServiceCardButton = styled.button.attrs({'data-widget': 'service-ca
 	transition: background-color 300ms ease-in-out;
 	&:hover {
 		background-color: var(--button-hover-color);
+	}
+	
+	${atMobile} {
+		font-size: 14px;
 	}
 `;

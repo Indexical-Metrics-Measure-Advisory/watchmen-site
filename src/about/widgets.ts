@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import AboutImage from '../assets/about.jpeg';
+import {atMobile} from '../theme';
 
 export const AboutContainer = styled.div.attrs({'data-widget': 'about'})`
 	display: flex;
@@ -16,6 +17,10 @@ export const SectionTitle = styled.div.attrs({'data-widget': 'section-title'})`
 	line-height: 1.5em;
 	text-transform: uppercase;
 	margin: 80px auto 0;
+	
+	${atMobile} {
+		margin-top: 48px;
+	}
 `;
 export const SectionMinorTitle = styled.div.attrs({'data-widget': 'section-minor-title'})`
 	position: relative;
@@ -34,6 +39,11 @@ export const SectionComment = styled.div.attrs({'data-widget': 'section-comment'
 	margin: 0 auto;
 	text-align: center;
 	width: 50%;
+
+	${atMobile} {
+		width: 80%;
+		font-size: 14px;
+	}
 `;
 export const AboutImageContainer = styled.div.attrs({'data-widget': 'about-image'})`
 	position: relative;
@@ -43,4 +53,8 @@ export const AboutImageContainer = styled.div.attrs({'data-widget': 'about-image
 	background-image: url(${AboutImage});
 	background-position: center;
 	background-size: cover;
+	
+	${atMobile} {
+		height: 300px;
+	}
 `;

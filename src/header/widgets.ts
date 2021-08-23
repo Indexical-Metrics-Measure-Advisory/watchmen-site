@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {atMobile} from '../theme';
 
 export const HeaderContainer = styled.header.attrs({'data-widget': 'header'})`
 	display: grid;
@@ -13,6 +14,11 @@ export const HeaderContainer = styled.header.attrs({'data-widget': 'header'})`
 	> svg {
 		width: 40px;
 		height: 40px;
+	}
+	
+	${atMobile} {
+		padding: 16px 16px;
+		height: 80px;
 	}
 `;
 export const HeaderCompanyName = styled.div.attrs({'data-widget': 'header-company-name'})`
@@ -29,6 +35,9 @@ export const Menus = styled.div.attrs({'data-widget': 'header-menus'})`
 	display: flex;
 	position: relative;
 	align-items: center;
+	${atMobile} {
+		display: none;
+	}
 `;
 export const Menu = styled.div.attrs<{ active: boolean }>(({active}) => {
 	return {

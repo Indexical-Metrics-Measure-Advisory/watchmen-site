@@ -1,4 +1,4 @@
-import {HeaderCompanyName, HeaderContainer, Menu, Menus} from './widget';
+import {HeaderCompanyName, HeaderContainer, Menu, Menus} from './widgets';
 import {Logo} from '../widgets/logo';
 import {useEffect, useState} from 'react';
 import {Router} from '../routes/router';

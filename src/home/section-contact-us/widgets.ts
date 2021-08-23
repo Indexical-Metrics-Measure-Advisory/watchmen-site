@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import HomeContactUsImage from '../../assets/contact-us.jpeg';
 import color from 'color';
-import {getTheme} from '../../theme';
+import {atMobile, getTheme} from '../../theme';
 
 export const SectionContactUsContainer = styled.div.attrs({'data-widget': 'home-section-contact-us'})`
 	display: grid;
@@ -22,9 +22,15 @@ export const SectionContactUsContainer = styled.div.attrs({'data-widget': 'home-
 		height: 100%;
 		background-image: url(${HomeContactUsImage});
 		background-position: center;
-		background-size: contain;
+		background-size: cover;
 		filter: saturate(1.2) hue-rotate(315deg) opacity(0.95);
 		z-index: -1;
+	}
+	
+	${atMobile} {
+		grid-template-columns: 1fr;
+		padding: 48px 32px 32px;
+		height: auto;
 	}
 `;
 export const SectionContactUsContent = styled.div.attrs({'data-widget': 'home-section-contact-us-content'})`
@@ -44,6 +50,18 @@ export const SectionContactUsContent = styled.div.attrs({'data-widget': 'home-se
 			font-weight: 500;
 		}
 	}
+	
+	${atMobile} {
+		margin-bottom: 32px;
+		> div[data-widget=section-title] {
+			margin: 0;
+		}
+		> div[data-widget=section-comment] {
+			margin: 32px 0 0;
+			max-width: 100%;
+			text-align: left;
+		}
+	}
 `;
 export const FieldName = styled.div.attrs({'data-widget': 'form-field-name'})<{ required: boolean }>`
 	position: relative;
@@ -59,6 +77,10 @@ export const FieldName = styled.div.attrs({'data-widget': 'form-field-name'})<{ 
 		content: '*';
 		display: ${({required}) => required ? 'inline-block' : 'none'};
 		margin-left: 4px;
+	}
+	
+	${atMobile} {
+		font-size: 14px;
 	}
 `;
 export const FieldInput = styled.input.attrs<{ pass: boolean }>(({pass}) => {
@@ -85,6 +107,11 @@ export const FieldInput = styled.input.attrs<{ pass: boolean }>(({pass}) => {
 	&::placeholder {
 		color: var(--dark-font-color);
 	}
+	
+	${atMobile} {
+		width: 100%;
+		font-size: 14px;
+	}
 `;
 export const FieldMInput = styled.textarea.attrs<{ pass: boolean }>(({pass}) => {
 	return {
@@ -110,6 +137,10 @@ export const FieldMInput = styled.textarea.attrs<{ pass: boolean }>(({pass}) => 
 	transition: all 300ms ease-in-out;
 	&::placeholder {
 		color: var(--dark-font-color);
+	}
+	${atMobile} {
+		width: 100%;
+		font-size: 14px;
 	}
 `;
 export const SubmitButton = styled.button.attrs({'data-widget': 'form-submit-button'})`

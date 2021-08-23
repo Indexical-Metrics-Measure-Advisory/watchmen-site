@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {atMobile} from '../theme';
 
 export const ServicesContainer = styled.div.attrs({'data-widget': 'services'})`
 	display: flex;
@@ -15,6 +16,10 @@ export const SectionTitle = styled.div.attrs({'data-widget': 'section-title'})`
 	line-height: 1.5em;
 	text-transform: uppercase;
 	margin: 80px auto 0;
+
+	${atMobile} {
+		margin-top: 48px;
+	}
 `;
 export const SectionMinorTitle = styled.div.attrs({'data-widget': 'section-minor-title'})`
 	position: relative;
@@ -33,6 +38,11 @@ export const SectionComment = styled.div.attrs({'data-widget': 'section-comment'
 	margin: 0 auto;
 	text-align: center;
 	width: 50%;
+
+	${atMobile} {
+		width: 80%;
+		font-size: 14px;
+	}
 `;
 export const ServiceCard = styled.div.attrs({'data-widget': 'service-card'})`
 	display: grid;
@@ -40,6 +50,19 @@ export const ServiceCard = styled.div.attrs({'data-widget': 'service-card'})`
 	grid-template-columns: 1fr 1fr;
 	height: 650px;
 	margin: 64px 64px 0;
+
+	${atMobile} {
+		grid-template-columns: 1fr;
+		margin: 32px 16px;
+		height: auto;
+		> div[data-widget=service-card-content] {
+			grid-row: 2;
+		}
+		> div[data-widget=service-card-image] {
+			grid-row: 1;
+			height: calc(100vw - 64px);
+		}
+	}
 `;
 export const ServiceCardContent = styled.div.attrs({'data-widget': 'service-card-content'})`
 	display: grid;
@@ -48,6 +71,10 @@ export const ServiceCardContent = styled.div.attrs({'data-widget': 'service-card
 	grid-template-rows: auto auto 1fr auto;
 	background-color: var(--big-card-bg-color);
 	padding: 108px 32px 64px;
+
+	${atMobile} {
+		padding-top: 64px;
+	}
 `;
 export const ServiceCardSlogan = styled.div.attrs({'data-widget': 'service-card-slogan'})`
 	position: relative;
@@ -77,6 +104,11 @@ export const ServiceCardComment = styled.div.attrs({'data-widget': 'section-comm
 	margin: 0 auto;
 	text-align: center;
 	width: 75%;
+
+	${atMobile} {
+		width: 100%;
+		font-size: 14px;
+	}
 `;
 export const ServiceCardButton = styled.button.attrs({'data-widget': 'service-card-button'})`
 	display: flex;
@@ -97,10 +129,14 @@ export const ServiceCardButton = styled.button.attrs({'data-widget': 'service-ca
 	&:hover {
 		background-color: var(--button-hover-color);
 	}
+
+	${atMobile} {
+		margin-top: 16px;
+	}
 `;
 export const ServiceCardImage = styled.div.attrs<{ image: string }>(({image}) => {
 	return {
-		'data-widget': 'service-card-content',
+		'data-widget': 'service-card-image',
 		style: {
 			backgroundImage: `url(${image})`
 		}

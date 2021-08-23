@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {getTheme} from '../theme';
+import {atMobile, getTheme} from '../theme';
 import color from 'color';
 
 export const PricingAndPlanContainer = styled.div.attrs({'data-widget': 'pricing-and-plan'})`
@@ -16,6 +16,10 @@ export const SectionTitle = styled.div.attrs({'data-widget': 'section-title'})`
 	font-size: 40px;
 	line-height: 1.5em;
 	margin: 168px auto 48px;
+	text-align: center;
+	${atMobile} {
+		margin-top: 48px;
+	}
 `;
 export const PlanCards = styled.div.attrs({'data-widget': 'plan-cards'})`
 	display: grid;
@@ -24,6 +28,12 @@ export const PlanCards = styled.div.attrs({'data-widget': 'plan-cards'})`
 	grid-column-gap: 48px;
 	justify-content: center;
 	margin-bottom: 120px;
+	
+	${atMobile} {
+		grid-template-columns: 1fr;
+		grid-row-gap: 32px;
+		padding: 0 32px;
+	}
 `;
 export const PlanCard = styled.div.attrs({'data-widget': 'plan-card'})`
 	display: grid;
@@ -32,6 +42,11 @@ export const PlanCard = styled.div.attrs({'data-widget': 'plan-card'})`
 	grid-template-rows: auto auto auto auto auto auto auto auto;
 	border: 1px solid ${() => color(getTheme().darkBgColor).alpha(0.35).toString()};
 	padding: 32px 0;
+
+	${atMobile} {
+		text-align: center;
+		padding: 32px 16px;
+	}
 `;
 export const PlanTitle = styled.div.attrs({'data-widget': 'plan-title'})`
 	position: relative;
@@ -64,6 +79,10 @@ export const PlanSlogan = styled.div.attrs({'data-widget': 'plan-slogan'})`
 	font-weight: 400;
 	font-size: 14px;
 	padding-bottom: 32px;
+
+	${atMobile} {
+		line-height: 1.8em;
+	}
 `;
 export const PlanName = styled.div.attrs({'data-widget': 'plan-name'})`
 	position: relative;
@@ -112,4 +131,8 @@ export const PlanComment = styled.div.attrs({'data-widget': 'plan-comment'})`
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 2em;
+	
+	${atMobile} {
+		text-align: center;
+	}
 `;

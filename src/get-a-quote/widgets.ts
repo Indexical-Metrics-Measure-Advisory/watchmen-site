@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import color from 'color';
-import {getTheme} from '../theme';
+import {atMobile, getTheme} from '../theme';
 import GetAQuoteImage from '../assets/get-a-quote.jpeg';
 
 export const GetAQuoteContainer = styled.div.attrs({'data-widget': 'get-a-quote'})`
@@ -17,6 +17,10 @@ export const GetAQuoteImageContainer = styled.div.attrs({'data-widget': 'get-a-q
 	background-image: url(${GetAQuoteImage});
 	background-position: center;
 	background-size: cover;
+
+	${atMobile} {
+		height: 300px;
+	}
 `;
 export const SectionTitle = styled.div.attrs({'data-widget': 'section-title'})`
 	position: relative;
@@ -46,6 +50,10 @@ export const GetAQuoteForm = styled.div.attrs({'data-widget': 'get-a-quote-form'
 	padding: 32px 64px 64px;
 	margin: 0 auto;
 	color: var(--dark-font-color);
+	${atMobile} {
+		margin: 0;
+		padding: 32px;
+	}
 `;
 export const FieldName = styled.div.attrs({'data-widget': 'form-field-name'})<{ required: boolean }>`
 	position: relative;

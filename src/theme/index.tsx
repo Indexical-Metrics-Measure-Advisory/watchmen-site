@@ -2,6 +2,8 @@ import {createGlobalStyle, ThemeProvider} from 'styled-components';
 import {DefaultTheme, ThemeType} from './default-theme';
 import 'normalize.css';
 
+export const atMobile = '@media (max-width: 899px)'
+
 const shouldIgnorePixel = (key: string) => {
 	return key.includes('FontWeight');
 };
@@ -49,6 +51,10 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
 		width: 100%;
 		min-width: 980px;
 		//font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+
+		${atMobile} {
+			min-width: 100%;
+		}
 	}
 
 	a,

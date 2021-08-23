@@ -25,7 +25,7 @@ export const Routes = () => {
 					<Redirect to={Router.HOME}/>
 				</Route>
 			</Switch>
+			<Footer/>
 		</HashRouter>
-		<Footer/>
 	</Suspense>;
 };

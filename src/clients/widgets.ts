@@ -1,5 +1,6 @@
 import styled, {keyframes} from 'styled-components';
 import ClientsImage from '../assets/clients.jpeg';
+import {atMobile} from '../theme';
 
 export const ClientsContainer = styled.div.attrs({'data-widget': 'clients'})`
 	display: flex;
@@ -29,6 +30,11 @@ export const ClientsImageContainer = styled.div.attrs({'data-widget': 'clients-i
 		background-size: cover;
 		filter: brightness(0.9);
 	}
+
+	${atMobile} {
+		grid-template-rows: 70% 1fr;
+		height: 400px;
+	}
 `;
 export const SectionTitle = styled.div.attrs({'data-widget': 'section-title'})`
 	position: relative;
@@ -39,6 +45,10 @@ export const SectionTitle = styled.div.attrs({'data-widget': 'section-title'})`
 	font-size: 50px;
 	line-height: 1.5em;
 	text-transform: uppercase;
+	
+	${atMobile} {
+		text-align: center;
+	}
 `;
 export const SectionMinorTitle = styled.div.attrs({'data-widget': 'section-minor-title'})`
 	position: relative;
@@ -49,6 +59,10 @@ export const SectionMinorTitle = styled.div.attrs({'data-widget': 'section-minor
 	margin: 0 auto;
 	text-align: center;
 	width: 50%;
+
+	${atMobile} {
+		width: 80%;
+	}
 `;
 export const ClientsCards = styled.div.attrs({'data-widget': 'client-cards'})`
 	display: grid;
@@ -58,6 +72,11 @@ export const ClientsCards = styled.div.attrs({'data-widget': 'client-cards'})`
 	grid-row-gap: 32px;
 	justify-content: center;
 	padding: 108px 0 48px;
+	
+	${atMobile} {
+		grid-template-columns: 1fr 1fr;
+		padding: 48px 32px 32px;
+	}
 `;
 export const ClientCard = styled.div.attrs({'data-widget': 'client-card'})`
 `;
@@ -109,5 +128,10 @@ export const ClientCardImage = styled.div.attrs<{ image: string }>(({image}) => 
 		transform: translateX(-50%);
 		transition: opacity 300ms ease-in-out;
 		z-index: 1;
+	}
+	
+	${atMobile} {
+		width: calc(50vw - 48px);
+		height: calc(50vw - 48px);
 	}
 `;
