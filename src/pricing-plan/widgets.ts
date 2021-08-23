@@ -18,7 +18,7 @@ export const SectionTitle = styled.div.attrs({'data-widget': 'section-title'})`
 	margin: 168px auto 48px;
 	text-align: center;
 	${atMobile} {
-		margin-top: 48px;
+		margin: 48px 32px;
 	}
 `;
 export const PlanCards = styled.div.attrs({'data-widget': 'plan-cards'})`

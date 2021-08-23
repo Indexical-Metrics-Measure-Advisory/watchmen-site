@@ -40,6 +40,11 @@ export const SectionComment = styled.div.attrs({'data-widget': 'section-comment'
 	margin: 0 auto;
 	text-align: center;
 	width: 50%;
+	
+	${atMobile} {
+		font-size: 14px;
+		width: 80%;
+	}
 `;
 export const GetAQuoteForm = styled.div.attrs({'data-widget': 'get-a-quote-form'})`
 	display: grid;
