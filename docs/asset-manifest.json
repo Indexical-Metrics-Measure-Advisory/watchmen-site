@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/watchmen-site/static/js/main.8d081332.chunk.js",
-    "main.js.map": "/watchmen-site/static/js/main.8d081332.chunk.js.map",
+    "main.js": "/watchmen-site/static/js/main.9d75a13f.chunk.js",
+    "main.js.map": "/watchmen-site/static/js/main.9d75a13f.chunk.js.map",
     "runtime-main.js": "/watchmen-site/static/js/runtime-main.23d126b6.js",
     "runtime-main.js.map": "/watchmen-site/static/js/runtime-main.23d126b6.js.map",
     "static/css/2.679831fc.chunk.css": "/watchmen-site/static/css/2.679831fc.chunk.css",
-    "static/js/2.49a8db29.chunk.js": "/watchmen-site/static/js/2.49a8db29.chunk.js",
-    "static/js/2.49a8db29.chunk.js.map": "/watchmen-site/static/js/2.49a8db29.chunk.js.map",
+    "static/js/2.1cac0cac.chunk.js": "/watchmen-site/static/js/2.1cac0cac.chunk.js",
+    "static/js/2.1cac0cac.chunk.js.map": "/watchmen-site/static/js/2.1cac0cac.chunk.js.map",
     "static/js/3.3783c85b.chunk.js": "/watchmen-site/static/js/3.3783c85b.chunk.js",
     "static/js/3.3783c85b.chunk.js.map": "/watchmen-site/static/js/3.3783c85b.chunk.js.map",
     "index.html": "/watchmen-site/index.html",
     "static/css/2.679831fc.chunk.css.map": "/watchmen-site/static/css/2.679831fc.chunk.css.map",
-    "static/js/2.49a8db29.chunk.js.LICENSE.txt": "/watchmen-site/static/js/2.49a8db29.chunk.js.LICENSE.txt",
+    "static/js/2.1cac0cac.chunk.js.LICENSE.txt": "/watchmen-site/static/js/2.1cac0cac.chunk.js.LICENSE.txt",
     "static/media/about.8ef91073.jpeg": "/watchmen-site/static/media/about.8ef91073.jpeg",
     "static/media/big-service-content.128c4964.jpeg": "/watchmen-site/static/media/big-service-content.128c4964.jpeg",
     "static/media/big-service-governance.1986863f.jpeg": "/watchmen-site/static/media/big-service-governance.1986863f.jpeg",
@@ -35,7 +35,7 @@
   "entrypoints": [
     "static/js/runtime-main.23d126b6.js",
     "static/css/2.679831fc.chunk.css",
-    "static/js/2.49a8db29.chunk.js",
-    "static/js/main.8d081332.chunk.js"
+    "static/js/2.1cac0cac.chunk.js",
+    "static/js/main.9d75a13f.chunk.js"
   ]
 }
