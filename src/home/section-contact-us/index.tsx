@@ -135,7 +135,7 @@ export const SectionContactUs = () => {
 				Haikou, Hainan, China
 			</SectionComment>
 			<SectionComment>
-				<a href="mailto:market@matrdata.com" target="_blank" rel="noreferrer">market@matrdata.com</a>
+				<a href="mailto:market@mail.matrdata.com" target="_blank" rel="noreferrer">market@matrdata.com</a>
 			</SectionComment>
 		</SectionContactUsContent>
 		<SectionContactUsContent>
