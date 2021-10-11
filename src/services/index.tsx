@@ -1,3 +1,6 @@
+import ServiceContent from '../assets/big-service-content.jpeg';
+import ServiceGovernance from '../assets/big-service-governance.jpeg';
+import ServicePipeline from '../assets/big-service-pipeline.jpeg';
 import {
 	SectionComment,
 	SectionMinorTitle,
@@ -11,11 +14,16 @@ import {
 	ServiceCardSlogan,
 	ServicesContainer
 } from './widgets';
-import ServicePipeline from '../assets/big-service-pipeline.jpeg';
-import ServiceGovernance from '../assets/big-service-governance.jpeg';
-import ServiceContent from '../assets/big-service-content.jpeg';
 
 export const Services = () => {
+	const onLearnMoreClicked = () => {
+		const link = document.createElement('a');
+		link.href = `${process.env.PUBLIC_URL}/matryoshka-data-en-20211011.pdf`;
+		link.target = '_blank';
+		link.download = `Matryoshka-Data Watchmen Introduction 2021.pdf`;
+		link.click();
+	};
+
 	return <ServicesContainer>
 		<SectionTitle>What We Offer</SectionTitle>
 		<SectionMinorTitle>More Than Just IT Support</SectionMinorTitle>
@@ -32,10 +40,11 @@ export const Services = () => {
 				<ServiceCardComment>
 					Enabling your workforce with top-notch technologies isn’t just important, but imperative for
 					business success. This customizable solution allows your team to work seamlessly and collaboratively
-					in a protected space. No matter what IT services you need, Matryoshka Data will be there to support you
+					in a protected space. No matter what IT services you need, Matryoshka Data will be there to support
+					you
 					every step of the way.
 				</ServiceCardComment>
-				<ServiceCardButton>Learn More</ServiceCardButton>
+				<ServiceCardButton onClick={onLearnMoreClicked}>Learn More</ServiceCardButton>
 			</ServiceCardContent>
 			<ServiceCardImage image={ServicePipeline}/>
 		</ServiceCard>
@@ -50,7 +59,7 @@ export const Services = () => {
 					efficiencies, enhance security and allow infinite scalability for future growth. With this resource
 					and our expertise, we’ll help maximize your organization’s productivity.
 				</ServiceCardComment>
-				<ServiceCardButton>Learn More</ServiceCardButton>
+				<ServiceCardButton onClick={onLearnMoreClicked}>Learn More</ServiceCardButton>
 			</ServiceCardContent>
 		</ServiceCard>
 		<ServiceCard>
@@ -63,7 +72,7 @@ export const Services = () => {
 					productivity or workflow. With our end-to-end solutions, Matryoshka Data is sure to help your
 					organization succeed.
 				</ServiceCardComment>
-				<ServiceCardButton>Learn More</ServiceCardButton>
+				<ServiceCardButton onClick={onLearnMoreClicked}>Learn More</ServiceCardButton>
 			</ServiceCardContent>
 			<ServiceCardImage image={ServiceContent}/>
 		</ServiceCard>

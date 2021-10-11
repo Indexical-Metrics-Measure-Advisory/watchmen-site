@@ -24,7 +24,7 @@ export const Header = () => {
 		<Menus>
 			<Menu active={route === Router.HOME} onClick={onMenuClicked(Router.HOME)}>Home</Menu>
 			<Menu active={route === Router.SERVICES} onClick={onMenuClicked(Router.SERVICES)}>Services</Menu>
-			<Menu active={route === Router.CLIENTS} onClick={onMenuClicked(Router.CLIENTS)}>Clients</Menu>
+			{/*<Menu active={route === Router.CLIENTS} onClick={onMenuClicked(Router.CLIENTS)}>Clients</Menu>*/}
 			<Menu active={route === Router.PLAN_AND_PRICING}
 			      onClick={onMenuClicked(Router.PLAN_AND_PRICING)}>
 				Plans & Pricing
