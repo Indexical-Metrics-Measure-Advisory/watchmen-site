@@ -1,8 +1,7 @@
-import {FooterContainer} from './widgets';
 import React, {useEffect, useState} from 'react';
-import {Menu, Menus} from './widgets';
-import {Router} from '../routes/router';
 import {useHistory, useLocation} from 'react-router-dom';
+import {Router} from '../routes/router';
+import {FooterContainer, Menu, Menus} from './widgets';
 
 export const Footer = () => {
 	const history = useHistory();
@@ -22,7 +21,7 @@ export const Footer = () => {
 		<Menus>
 			<Menu active={route === Router.HOME} onClick={onMenuClicked(Router.HOME)}>Home</Menu>
 			<Menu active={route === Router.SERVICES} onClick={onMenuClicked(Router.SERVICES)}>Services</Menu>
-			<Menu active={route === Router.CLIENTS} onClick={onMenuClicked(Router.CLIENTS)}>Clients</Menu>
+			{/*<Menu active={route === Router.CLIENTS} onClick={onMenuClicked(Router.CLIENTS)}>Clients</Menu>*/}
 			<Menu active={route === Router.PLAN_AND_PRICING}
 			      onClick={onMenuClicked(Router.PLAN_AND_PRICING)}>
 				Plans & Pricing
