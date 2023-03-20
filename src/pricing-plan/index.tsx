@@ -75,8 +75,8 @@ export const PricingAndPlan = () => {
 				</ExperimentDownloadLink>
 			</ExperimentFeature>
 			<ExperimentWarning>
-				Please note all experiment contents are non-commercial purposes.<br/>
-				For commercial, please send mail to <a href="mailto:market@mail.matrdata.com" target="_blank"
+				Please note all experiment contents are available for non-commercial purposes only.<br/>
+				For commercial purposes, please send mail to <a href="mailto:market@mail.matrdata.com" target="_blank"
 				                                       rel="noreferrer">market@matrdata.com</a> to get more details.
 			</ExperimentWarning>
 		</ExperimentFeatures>
