@@ -1,4 +1,13 @@
+import React from 'react';
+import {useHistory} from 'react-router-dom';
+import {Router} from '../routes/router';
 import {
+	ExperimentDescription,
+	ExperimentDownloadLink,
+	ExperimentFeature,
+	ExperimentFeatures,
+	ExperimentTitle,
+	ExperimentWarning,
 	PlanButton,
 	PlanCard,
 	PlanCards,
@@ -9,10 +18,9 @@ import {
 	PlanSlogan,
 	PlanTitle,
 	PricingAndPlanContainer,
+	SecondarySectionTitle,
 	SectionTitle
 } from './widgets';
-import {useHistory} from 'react-router-dom';
-import {Router} from '../routes/router';
 
 export const PricingAndPlan = () => {
 	const history = useHistory();
@@ -22,6 +30,14 @@ export const PricingAndPlan = () => {
 	const onEnterpriseClicked = () => {
 		history.push(Router.GET_A_QUOTE);
 	};
+	const onDownload1Clicked = () => {
+		const link = document.createElement('a');
+		link.href = `${process.env.PUBLIC_URL}/metrics_asset.zip`;
+		link.target = '_blank';
+		link.download = `Insurance Measure & Metrics Set 2023.zip`;
+		link.click();
+	};
+
 	return <PricingAndPlanContainer>
 		<SectionTitle>Choose your pricing plan</SectionTitle>
 		<PlanCards>
@@ -46,5 +62,23 @@ export const PricingAndPlan = () => {
 				<PlanComment>Our premium support</PlanComment>
 			</PlanCard>
 		</PlanCards>
+		<SecondarySectionTitle>Experiment Features</SecondarySectionTitle>
+		<ExperimentFeatures>
+			<ExperimentFeature>
+				<ExperimentTitle>Insurance Measure & Metrics Set</ExperimentTitle>
+				<ExperimentDescription>
+					A demo measures & metrics set on insurance industry, including dozens indicators and related topics,
+					pipelines, spaces and subjects.
+				</ExperimentDescription>
+				<ExperimentDownloadLink>
+					<span onClick={onDownload1Clicked}>Download</span>
+				</ExperimentDownloadLink>
+			</ExperimentFeature>
+			<ExperimentWarning>
+				Please note all experiment contents are non-commercial purposes.<br/>
+				For commercial, please send mail to <a href="mailto:market@mail.matrdata.com" target="_blank"
+				                                       rel="noreferrer">market@matrdata.com</a> to get more details.
+			</ExperimentWarning>
+		</ExperimentFeatures>
 	</PricingAndPlanContainer>;
 };
