@@ -67,8 +67,18 @@ export const PricingAndPlan = () => {
 			<ExperimentFeature>
 				<ExperimentTitle>Insurance Measure & Metrics Set</ExperimentTitle>
 				<ExperimentDescription>
-					A demo measures & metrics set on insurance industry, including dozens indicators and related topics,
-					pipelines, spaces and subjects.
+					Insurance metrics store that contains various key performance indicators (KPIs) and metrics related
+					to insurance business operations. It provides a centralized platform for insurers to store, analyze
+					and visualize the data that is collected across various systems and processes within their
+					organization.<br/>
+					The metrics can be related to different areas of insurance, including underwriting, claims
+					management, policy administration, financial reporting, and more.<br/>
+					By using insurance metrics stores, insurers can gain valuable insights into their business
+					performance, identify trends and patterns, and make data-driven decisions. The metrics store can
+					also be integrated with other analytical tools to further enhance data analysis and reporting
+					capabilities.<br/>
+					Overall, the insurance metrics store is an essential component of modern insurance operations,
+					enabling insurers to optimize their performance and improve their bottom line.
 				</ExperimentDescription>
 				<ExperimentDownloadLink>
 					<span onClick={onDownload1Clicked}>Download</span>
@@ -76,8 +86,8 @@ export const PricingAndPlan = () => {
 			</ExperimentFeature>
 			<ExperimentWarning>
 				Please note all experiment contents are available for non-commercial purposes only.<br/>
-				For commercial purposes, please send mail to <a href="mailto:market@mail.matrdata.com" target="_blank"
-				                                       rel="noreferrer">market@matrdata.com</a> to get more details.
+				For commercial purposes, please contact us on <a href="mailto:market@mail.matrdata.com" target="_blank"
+				                                                 rel="noreferrer">market@matrdata.com</a>.
 			</ExperimentWarning>
 		</ExperimentFeatures>
 	</PricingAndPlanContainer>;

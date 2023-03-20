@@ -150,6 +150,11 @@ export const ExperimentFeatures = styled.div.attrs({'data-widget': 'experiment-f
 	grid-template-columns : 948px;
 	justify-content       : center;
 	margin-bottom         : 120px;
+	${atMobile} {
+		grid-template-columns : 1fr;
+		grid-row-gap          : 32px;
+		padding               : 0 32px;
+	}
 `;
 export const ExperimentFeature = styled.div.attrs({'data-widget': 'experiment-feature'})`
 	position : relative;
@@ -165,8 +170,11 @@ export const ExperimentTitle = styled.div.attrs({'data-widget': 'experiment-titl
 	padding-bottom : 16px;
 `;
 export const ExperimentDescription = styled.div.attrs({'data-widget': 'experiment-desc'})`
-	position : relative;
-	opacity  : 0.7;
+	position    : relative;
+	opacity     : 0.7;
+	font-family : Raleway, sans-serif;
+	font-size   : 0.8em;
+	line-height : 1.4em;
 `;
 export const ExperimentDownloadLink = styled.div.attrs({'data-widget': 'experiment-download-link'})`
 	position     : relative;
@@ -185,4 +193,3 @@ export const ExperimentWarning = styled.div.attrs({'data-widget': 'experiment-wa
 	line-height : 1.5em;
 	font-size   : 0.8em;
 `;
-
